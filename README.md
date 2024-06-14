@@ -1,4 +1,4 @@
-# Exchange 🤝
+# Crypto Exchange 🤝
 
 ![Alt Text](exchange2.PNG)
 
