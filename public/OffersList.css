@@ -1,0 +1,49 @@
+.show-offers-button,
+.hide-offers-button {
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.show-offers-button:hover,
+.hide-offers-button:hover {
+  background-color: #3b82f6; 
+}
+
+.offers-list {
+  background-color: #f8f9fa; 
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.offers-list.hidden {
+  transform: translateX(-100%);
+  opacity: 0;
+  visibility: hidden;
+}
+
+.offers-list.visible {
+  transform: translateX(0);
+  opacity: 1;
+  visibility: visible;
+}
+
+.offers-list h1 {
+  color: #1e3a8a; 
+}
+
+.offers-list ul li {
+  background-color: #ffffff; 
+  transition: box-shadow 0.3s ease;
+}
+
+.offers-list ul li:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.offers-list button {
+  transition: background-color 0.3s ease;
+}
+
+.offers-list button:hover {
+  background-color: #2563eb; 
+}

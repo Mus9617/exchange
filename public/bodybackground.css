@@ -1,0 +1,96 @@
+.lily {
+  background: rgb(255,255,255);
+  background: linear-gradient(210deg, rgba(255,255,255,1) 0%, rgba(3,176,191,1) 37%, rgba(253,195,255,1) 66%, rgba(0,253,255,1) 100%);;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+} 
+
+.lily3 {
+  background: rgb(255,255,255);
+  background: linear-gradient(210deg, rgba(255,255,255,1) 0%, rgba(3,176,191,1) 37%, rgba(253,195,255,1) 66%, rgba(0,253,255,1) 100%);;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+
+.show-form-button,
+.hide-form-button {
+cursor: pointer;
+transition: background-color 0.3s ease;
+position: fixed;
+bottom: 1rem; 
+right: 1rem; 
+padding: 0.5rem 1rem;
+background-color: #3b82f6; 
+border-radius: 0.25rem;
+box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.show-form-button:hover,
+.hide-form-button:hover {
+background-color: #2563eb;
+}
+
+.create-crypto-form {
+position: fixed;
+bottom: 10rem; 
+right: 1rem; 
+width: 25rem;
+padding: 1rem;
+background-color: white;
+border-radius: 0.25rem;
+box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.create-crypto-form h1 {
+color: #1e3a8a; 
+}
+
+.create-crypto-form form {
+display: flex;
+flex-direction: column;
+gap: 1rem;
+}
+
+.create-crypto-form input,
+.create-crypto-form button {
+width: 100%;
+padding: 0.5rem;
+border: 1px solid #d1d5db;
+border-radius: 0.25rem;
+}
+
+.create-crypto-form input:focus {
+border-color: #2563eb;
+}
+
+.create-crypto-form button {
+background-color: #3b82f6;
+color: white;
+transition: background-color 0.3s ease;
+}
+
+.create-crypto-form button:hover {
+background-color: #2563eb;
+}
+
+.show-offers-button {
+cursor: pointer;
+transition: background-color 0.3s ease;
+position: fixed;
+bottom: 20rem; 
+right: 1rem; 
+padding: 0.5rem 1rem;
+background-color: #3b82f6; 
+color: white;
+border-radius: 0.25rem;
+box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.show-offers-button:hover {
+background-color: #2563eb; 
+}

@@ -1,0 +1,89 @@
+.lily1 {
+    background: rgb(255,255,255);
+    background: linear-gradient(210deg, rgba(255,255,255,1) 0%, rgba(3,176,191,1) 37%, rgba(253,195,255,1) 66%, rgba(0,253,255,1) 100%);
+    min-height: 100vh;
+  }
+.exchange-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 20px;
+    background: inherit;
+  }
+  
+  .show-form-button,
+  .hide-form-button,
+  .show-offers-button {
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: #3b82f6;
+    color: white;
+    border-radius: 0.25rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    justify-content: space-between;
+  }
+  
+  .show-form-button:hover,
+  .hide-form-button:hover,
+  .show-offers-button:hover {
+    background-color: #2563eb;
+    justify-content: space-between;
+  }
+  
+  .create-crypto-form,
+  .offers-list {
+    
+    bottom: 5rem;
+    right: 1rem;
+    width: 20rem;
+    padding: 1rem;
+    background-color: white;
+    border-radius: 0.25rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+  
+  .create-crypto-form h1,
+  .offers-list h1 {
+    color: #1e3a8a;
+  }
+  
+  .create-crypto-form form,
+  .offers-list ul {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .create-crypto-form input,
+  .create-crypto-form button,
+  .offers-list button {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #d1d5db;
+    border-radius: 0.25rem;
+  }
+  
+  .create-crypto-form input:focus,
+  .offers-list input:focus {
+    border-color: #2563eb;
+  }
+  
+  .create-crypto-form button,
+  .offers-list button {
+    background-color: #3b82f6;
+    color: white;
+    transition: background-color 0.3s ease;
+  }
+  
+  .create-crypto-form button:hover,
+  .offers-list button:hover {
+    background-color: #2563eb;
+  }
+  

@@ -1,0 +1,15 @@
+.lily {
+  background: rgb(255,255,255);
+  background: linear-gradient(210deg, rgba(255,255,255,1) 0%, rgba(3,176,191,1) 37%, rgba(253,195,255,1) 66%, rgba(0,253,255,1) 100%);;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.lily1 {
+  background: rgb(255,255,255);
+  background: linear-gradient(210deg, rgba(255,255,255,1) 0%, rgba(3,176,191,1) 37%, rgba(253,195,255,1) 66%, rgba(0,253,255,1) 100%);
+  min-height: 100vh;
+}

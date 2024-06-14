@@ -1,0 +1,151 @@
+/* slick-carousel */
+@import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick-theme.css";
+
+/* toastify */
+@import "~react-toastify/dist/ReactToastify.css";
+
+body {
+  background: rgb(33,29,33);
+  background: linear-gradient(22deg, rgba(33,29,33,1) 0%, rgba(3,176,191,1) 37%, rgba(253,195,255,1) 66%, rgba(0,253,255,1) 100%);
+}
+
+.crypto-list-container {
+  max-width: 250px;
+  margin: 20px auto;
+  padding: 15px;
+  background-color: #f7f7f7;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2), 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.crypto-list-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.crypto-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.crypto-item {
+  padding: 15px;
+  border-bottom: 1px solid #ccc;
+}
+
+.crypto-item:last-child {
+  border-bottom: none;
+}
+
+.crypto-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.crypto-name {
+  font-size: 18px;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.crypto-value {
+  font-size: 14px;
+  color: #666;
+}
+
+.buy-section {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.value-input {
+  width: 80px;
+  padding: 4px;
+  font-size: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+.buy-button {
+  background-color: #4CAF50;
+  color: #fff;
+  padding: 4px 8px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.buy-button:hover {
+  background-color: #3e8e41;
+}
+
+@media (min-width: 768px) {
+  .crypto-list-container {
+    max-width: 600px;
+  }
+
+  .crypto-list-title {
+    font-size: 28px;
+  }
+
+  .crypto-item {
+    padding: 20px;
+  }
+
+  .crypto-name {
+    font-size: 20px;
+  }
+
+  .crypto-value {
+    font-size: 16px;
+  }
+
+  .value-input {
+    width: 100px;
+    font-size: 14px;
+  }
+
+  .buy-button {
+    padding: 6px 12px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .crypto-list-container {
+    max-width: 800px;
+  }
+
+  .crypto-list-title {
+    font-size: 32px;
+  }
+
+  .crypto-item {
+    padding: 25px;
+  }
+
+  .crypto-name {
+    font-size: 24px;
+  }
+
+  .crypto-value {
+    font-size: 18px;
+  }
+
+  .value-input {
+    width: 120px;
+    font-size: 16px;
+  }
+
+  .buy-button {
+    padding: 8px 16px;
+  }
+}

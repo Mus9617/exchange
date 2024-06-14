@@ -1,0 +1,69 @@
+.crypto-list-container {
+    
+    padding: 40px;
+  }
+  
+  .title {
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .crypto-card {
+    padding: 20px;
+    transition: transform 0.3s ease;
+  }
+  
+  .crypto-card:hover {
+    transform: scale(1.05);
+  }
+  
+  .card-content {
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .crypto-name {
+    font-size: 18px;
+    color: #2c3e50;
+    margin-bottom: 10px;
+  }
+  
+  .crypto-details {
+    font-size: 14px;
+    color: #7f8c8d;
+  }
+  
+  .buy-section {
+    margin-top: 20px;
+  }
+  
+  .input-field {
+    border: 2px solid #bdc3c7;
+    border-radius: 10px;
+    padding: 10px;
+    width: 80px;
+    transition: border-color 0.2s;
+  }
+  
+  .input-field:focus {
+    border-color: #3498db;
+    outline: none;
+  }
+  
+  .buy-button {
+    background-color: #2980b9;
+    border: none;
+    border-radius: 10px;
+    color: #fff;
+    cursor: pointer;
+    padding: 10px 20px;
+    transition: background-color 0.3s;
+  }
+  
+  .buy-button:hover {
+    background-color: #3498db;
+  }
+  
