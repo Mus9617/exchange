@@ -1,6 +1,6 @@
 # Exchange;
 
-![Alt Text](exchange2.png)
+![Alt Text](exchange2.PNG)
 
 
 # Exchange Platform
