@@ -1,6 +1,6 @@
 # Exchange;
 
-![Alt Text](/ignore/exchange1.png)
+![Alt Text](exchange1.png)
 
 
 # Exchange Platform
