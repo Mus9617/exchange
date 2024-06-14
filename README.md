@@ -23,12 +23,12 @@ Exchange Platform is a web application that allows users to create and trade cry
 - Next.js
 - Axios
 - CSS (with TailwindCSS for styling)
-- Node.js
+- 
 ## Getting Started
 
 To run the application locally, follow these steps:
 
-- pnpm i && npm i
+- pnpm i ||  npm i
 - npm run dev
 
 ### Prerequisites
