@@ -8,24 +8,9 @@ import Slider from 'react-slick';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import '../../../public/OffersList.css';
+import { ApiErrorResponse, Trade } from '../../Services/historicTrades';
 
-interface Trade {
-  Giver: {
-    pseudo: string;
-  };
-  Receiver: {
-    pseudo: string;
-  };
-  Crypto: {
-    name: string;
-  };
-  quantity: number;
-  created_at: string;
-}
 
-interface ApiErrorResponse {
-  message: string;
-}
 
 async function fetchTrades(): Promise<Trade[]> {
   try {
@@ -132,12 +117,12 @@ export function HistoricTrades(): JSX.Element {
   return (
     <div>
       {role === 'admin' && (
-        <button onClick={() => setShowTrades(!showTrades)} className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600">
+        <button onClick={() => setShowTrades(!showTrades)} className="show-offers-button hide-offers-button px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600">
           {showTrades ? 'Hide Trades' : 'Show Trades'}
         </button>
       )}
       {showTrades && (
-        <div>
+        <div className="offers-list">
           <h1 className="text-2xl font-bold text-center mb-6">Historic Trades 📊</h1>
           <Slider {...sliderSettings}>
             {trades.map((trade) => (

@@ -47,3 +47,46 @@
 .offers-list button:hover {
   background-color: #2563eb; 
 }
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  .offers-list {
+    padding: 1rem;
+  }
+
+  .offers-list h1 {
+    font-size: 2rem; 
+  }
+
+  .offers-list ul li {
+    padding: 0.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .offers-list {
+    padding: 0.5rem;
+  }
+
+  .offers-list h1 {
+    font-size: 1.75rem; 
+  }
+
+  .offers-list ul li {
+    padding: 0.25rem; 
+  }
+}
+
+@media (max-width: 640px) {
+  .offers-list {
+    padding: 0.25rem;
+  }
+
+  .offers-list h1 {
+    font-size: 1.5rem; 
+  }
+
+  .offers-list ul li {
+    padding: 0.125rem; 
+  }
+}

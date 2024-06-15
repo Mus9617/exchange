@@ -8,18 +8,9 @@ import Slider from 'react-slick';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { getAllCrypto } from '@/Services/crypto';
+import { ApiErrorResponse, Crypto } from '../../Services/buycrypto';
 
-interface Crypto {
-  id: string;
-  name: string;
-  number: number;
-  quantity: string;
-  value: string;
-}
 
-interface ApiErrorResponse {
-  message: string;
-}
 
 export function CryptoList(): JSX.Element {
   const [cryptos, setCryptos] = useState<Crypto[]>([]);
@@ -45,26 +36,26 @@ export function CryptoList(): JSX.Element {
  * @throws {AxiosError<ApiErrorResponse>} - If there is an error during the buy operation.
  */
 
-  async function handleBuy(crypto: Crypto) {
-    try {
-      const amount = parseFloat(buyValues[crypto.id]);
-  
-      if (isNaN(amount) || amount <= 0) {
-        toast.error('Please enter a valid amount');
-        return;
-      }
-  
-      if (!Number.isFinite(amount)) {
-        toast.error('Invalid amount. Please enter a numeric value.');
-        return;
-      }
-  
-      const response = await buyCrypto(crypto.id, amount);
-      toast.success(`Successfully bought ${crypto.name} with amount ${amount}`);
-    } catch (error) {
-      handleBuyError(error as AxiosError<ApiErrorResponse>);
+async function handleBuy(crypto: Crypto) {
+  try {
+    const amount = parseFloat(buyValues[crypto.id]);
+    
+    if (isNaN(amount) || amount <= 0) {
+      toast.error('Please enter a valid amount');
+      return;
     }
+
+    if (!Number.isFinite(amount)) {
+      toast.error('Invalid amount. Please enter a numeric value.');
+      return;
+    }
+
+    const response = await buyCrypto(crypto.id, amount);
+    toast.success(`Successfully bought ${crypto.name} with amount ${amount}`);
+  } catch (error) {
+    handleBuyError(error as AxiosError<ApiErrorResponse>);
   }
+}
   /**
  * Sends a request to the server to buy a cryptocurrency with the specified amount.
  *

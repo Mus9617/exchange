@@ -19,6 +19,7 @@ import {
   Tooltip,
   Legend,
 } from 'chart.js';
+import { CryptoHistoryProps, HistoryData } from '@/Services/historicTrades';
 
 ChartJS.register(
   LineElement,
@@ -29,15 +30,6 @@ ChartJS.register(
   Legend
 );
 
-interface CryptoHistoryProps {
-  cryptoId: string;
-}
-
-interface HistoryData {
-  updated_at: string;
-  created_at: string
-  value: number;
-}
 /**
  * Renders a component that displays the historical data of a cryptocurrency.
  *

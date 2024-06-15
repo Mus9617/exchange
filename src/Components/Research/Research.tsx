@@ -2,13 +2,9 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { Container, TextField, Button, Box, Card, CardContent, CardMedia, Typography, CircularProgress } from "@mui/material";
+import { Crypto } from "@/Services/reaserch";
 
-interface Crypto {
-    id: string;
-    name: string;
-    value: number;
-    image: string;
-}
+
 /**
  * Renders a page for creating and managing promo codes.
  *

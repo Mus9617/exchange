@@ -10,17 +10,8 @@ import { register as registerService } from '@/Services/register';
 import { WavyBackground } from '../ui/wavy-background';
 import Footer from '../Footer/Footer';
 import { Typography } from '@mui/material';
+import { SignUpFormProps } from '@/Services/uthprops';
 
-interface SignUpFormProps {
-  firstName: string;
-  lastName: string;
-  pseudo: string;
-  city: string;
-  email: string;
-  password: string;
-  promoCode: string;
-  age: number;
-}
 
 const SignUp: React.FC = () => {
   const { register, handleSubmit, formState: { errors } } = useForm<SignUpFormProps>();

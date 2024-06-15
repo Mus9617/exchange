@@ -65,33 +65,6 @@ const fetchPromoCodes = async () => {
 };
 
 /**
- * Fetches user details from the server.
- *
- * @return {Promise} A Promise that resolves with the user details or rejects with an error.
- */
-const fetchUserDetails = async () => {
-    try {
-        const response = await axios.get(
-            `${process.env.NEXT_PUBLIC_API_URL}/user/details`,
-            {
-                headers: {
-                    'Content-Type': 'application/json',
-                    Authorization: `Bearer ${localStorage.getItem("token")}`,
-                },
-            }
-        );
-        return response.data;
-    } catch (error) {
-        if (axios.isAxiosError(error)) {
-            console.error("Error response:", error.response?.data);
-            throw new Error(error.response?.data?.message || error.message);
-        } else {
-            throw new Error("An unknown error occurred");
-        }
-    }
-};
-
-/**
  * Renders a page for creating and managing promo codes.
  *
  * @return {ReactElement} The rendered promo code page.
@@ -106,16 +79,10 @@ const PromoCodePage: React.FC = () => {
     const [role, setRole] = useState<string>("");
 
     useEffect(() => {
-        const getUserDetails = async () => {
-            try {
-                const userDetails = await fetchUserDetails();
-                setRole(userDetails.role);
-            } catch (error) {
-                console.error("Error fetching user details:", error);
-            }
-        };
-
-        getUserDetails();
+        const role = localStorage.getItem("userRole");
+        if (role) {
+            setRole(role);
+        }
     }, []);
 
     const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {

@@ -6,6 +6,7 @@ import Slider from 'react-slick';
 import { ArrowBackIos, ArrowForwardIos } from '@mui/icons-material';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { UserAsset } from '@/Services/userAssets';
 
 async function fetchUserAssets() {
     const url = `${process.env.NEXT_PUBLIC_API_URL}/user/users-assets`;
@@ -20,21 +21,7 @@ async function fetchUserAssets() {
     return response.data;
 }
 
-interface UserAsset {
-    pseudo: string;
-    firstName: string;
-    lastName: string;
-    dollarAvailables: number;
-    UserHasCrypto: {
-        Crypto: {
-            id: string;
-            name: string;
-            image: string;
-            value: number;
-        };
-        amount: number;
-    }[];
-}
+
 /**
  * Renders the UserAssets component, which displays the user's assets and exchange history.
  *

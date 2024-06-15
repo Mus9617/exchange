@@ -1,13 +1,6 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-
-interface Crypto {
-  name: string;
-  value: number;
-  quantity: number;
-  image: string;
-}
 /**
  * Sends a POST request to create a new crypto asset with the provided name, value, quantity, and image.
  *

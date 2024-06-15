@@ -9,13 +9,8 @@ import Slider from 'react-slick';
 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { Crypto } from '../../Services/cryptoList';
 
-interface Crypto {
-    id: string;
-    name: string;
-    image: string;
-    value: number;
-}
 
 /**
  * Renders a list of cryptocurrencies with the ability to show and hide them.
