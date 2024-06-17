@@ -48,7 +48,7 @@
   background-color: #2563eb; 
 }
 
-/* Responsive Styles */
+
 @media (max-width: 1024px) {
   .offers-list {
     padding: 1rem;

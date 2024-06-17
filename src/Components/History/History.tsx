@@ -100,6 +100,7 @@ const CryptoHistory: React.FC<CryptoHistoryProps> = ({ cryptoId }) => {
         borderColor: 'rgba(75,192,192,1)',
         backgroundColor: 'rgba(75,192,192,0.2)',
         fill: true,
+        reverse: true,
       },
     ],
   };
@@ -110,6 +111,7 @@ const CryptoHistory: React.FC<CryptoHistoryProps> = ({ cryptoId }) => {
         title: {
           display: true,
           text: 'Date',
+          reverse: true,
         },
       },
       y: {

@@ -8,6 +8,7 @@ import "../../../public/body.css"
 import TypeWriter2 from '@/Components/TypeWriter/TypeWriter2'
 import UserAssets from '@/Components/UserAsset/UserAsset'
 import HistoricTrades from '@/Components/HistoricTrades/HisstoricTrades'
+import UserAssetsTrade from '@/Components/UserAsset/UserAssetsTrade'
 
 
 
@@ -17,6 +18,7 @@ const Asset = () => {
         <Nav />
         <TypeWriter2 />
      <SearchBar />
+     <UserAssetsTrade />
      <HistoricTrades />
      <UserAssets />
       <CryptoHistory />

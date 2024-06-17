@@ -1,15 +1,16 @@
 import axios from 'axios';
 
-interface RegisterProps {
+export interface RegisterProps {
   firstName: string;
   lastName: string;
   pseudo: string;
   city: string;
   email: string;
   password: string;
-  promoCode: string;
+  promoCode?: string; 
   age: number;
 }
+
 
 export async function register(registerProps: RegisterProps) {
   const url = `${process.env.NEXT_PUBLIC_API_URL}`;

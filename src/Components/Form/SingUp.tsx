@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
-import { useForm, SubmitHandler, UseFormRegister } from 'react-hook-form';
+import { useForm, SubmitHandler } from 'react-hook-form';
 import { useRouter } from 'next/navigation';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -11,18 +11,45 @@ import { WavyBackground } from '../ui/wavy-background';
 import Footer from '../Footer/Footer';
 import { Typography } from '@mui/material';
 import { SignUpFormProps } from '@/Services/uthprops';
+import * as yup from 'yup';
 
+
+// Here we gonna pass the Schema for yup to used in the useform.
+
+const validationSchema = yup.object().shape({
+  firstName: yup.string().required('First name is required'),
+  lastName: yup.string().required('Last name is required'),
+  pseudo: yup.string()
+    .min(6, 'Pseudo must be at least 6 characters')
+    .matches(/^[a-z]+$/, 'Pseudo must be all lowercase letters')
+    .required('Pseudo is required'),
+  city: yup.string().required('City is required'),
+  email: yup.string()
+    .email('Email must be a valid email')
+    .required('Email is required'),
+  password: yup.string()
+    .min(10, 'Password must be at least 10 characters')
+    .matches(/[A-Z]/, 'Password must contain at least one uppercase letter')
+    .matches(/\d/, 'Password must contain at least one number')
+    .required('Password is required'),
+  promoCode: yup.string().notRequired(),
+  age: yup.number()
+    .required('Age is required')
+    .typeError('Age must be a number'),
+});
 
 const SignUp: React.FC = () => {
-  const { register, handleSubmit, formState: { errors } } = useForm<SignUpFormProps>();
-  const [error, setError] = useState<null | string>(null);
+  const { register, handleSubmit, setError, formState: { errors } } = useForm<SignUpFormProps>();
+  const [error, setErrorState] = useState<null | string>(null);
   const router = useRouter();
 
   const onSubmit: SubmitHandler<SignUpFormProps> = async (data) => {
     try {
-      // Ensure Ages is a number lot of errors so to test-->Mus@TODO###//
+      await validationSchema.validate(data, { abortEarly: false });
+
       const registerProps = {
         ...data,
+        promoCode: data.promoCode || '', 
         age: Number(data.age),
       };
 
@@ -35,12 +62,19 @@ const SignUp: React.FC = () => {
       setTimeout(() => {
         router.push('/Home');
       }, 3000);
-    } catch (error) {
-      if (error instanceof Error) {
-        setError(error.message);
-        toast.error(error.message);
+    } catch (validationErrors) {
+      if (validationErrors instanceof yup.ValidationError) {
+        validationErrors.inner.forEach((error) => {
+          setError(error.path as keyof SignUpFormProps, {
+            type: 'manual',
+            message: error.message,
+          });
+        });
+      } else if (validationErrors instanceof Error) {
+        setErrorState(validationErrors.message);
+        toast.error(validationErrors.message);
       } else {
-        setError('An error occurred');
+        setErrorState('An error occurred');
         toast.error('An error occurred');
       }
     }
@@ -136,7 +170,7 @@ const InputField = ({
 }: {
   label: string;
   name: keyof SignUpFormProps;
-  register: UseFormRegister<SignUpFormProps>;
+  register: any;
   errors: any;
   type?: string;
 }) => {
@@ -147,11 +181,11 @@ const InputField = ({
       </label>
       <input
         type={type}
-        {...register(name, { required: true })}
+        {...register(name)}
         className={`bg-gray-50 border ${errors ? 'border-red-500' : 'border-gray-300'} text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500`}
         placeholder={label}
       />
-      {errors && <span className="text-red-500 text-sm">This field is required</span>}
+      {errors && <span className="text-red-500 text-sm">{errors.message}</span>}
     </div>
   );
 };
