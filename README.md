@@ -68,9 +68,14 @@ NEXT_PUBLIC_API_URL=http://your-api-url
 
 ### Figma Design
 
-Check out the design for this project on Figma  ```https://www.figma.com/design/SQQJzcHxE4HJoJZtshkNtT/Untitled?node-id=0-1&t=m9QXV0t3mnkfbzmL-1 ```
+Check out the design for this project on Figma  
+```Link
+https://www.figma.com/design/SQQJzcHxE4HJoJZtshkNtT/Untitled?node-id=0-1&t=m9QXV0t3mnkfbzmL-1 
+```
 
 ### Power Point Presentation
 
-This is my Power poin where i explain whatis inside this project.
- ```https://1drv.ms/p/s!AlS6CM7JJL0MgQkyZg91cfHvwgHg?e=56DCuO ```
+
+ ```Link
+https://1drv.ms/p/s!AlS6CM7JJL0MgQkyZg91cfHvwgHg?e=56DCuO
+```
