@@ -42,8 +42,8 @@ Ensure you have the following installed on your local development environment:
 1. Clone the repository:
 
     ```bash
-    git clone https://github.com/yourusername/exchange-platform.git
-    cd exchange-platform
+    git clone https://github.com/Mus9617/exchange.git
+    cd exchange
     ```
 
 2. Install the dependencies:
