@@ -18,7 +18,6 @@ const Asset = () => {
         <Nav />
         <TypeWriter2 />
      <SearchBar />
-     <UserAssetsTrade />
      <HistoricTrades />
      <UserAssets />
       <CryptoHistory />

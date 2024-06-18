@@ -5,7 +5,7 @@ import React, { useState } from 'react';
 import "../../../public/bodybackground.css"
 import TypeWriter1 from '@/Components/TypeWriter/TypeWriter1'
 import Footer from '@/Components/Footer/Footer';
-import UserAssetsTrade from '@/Components/UserAsset/UserAssetsTrade';
+
 
 
 /**
@@ -20,7 +20,6 @@ import UserAssetsTrade from '@/Components/UserAsset/UserAssetsTrade';
       <div>
         <Nav />
         <TypeWriter1 />
-        <UserAssetsTrade />
         <PromoCodePage />
         <Footer/>
       </div>

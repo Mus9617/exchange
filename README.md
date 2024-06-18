@@ -64,3 +64,8 @@ Create a `.env.local` file in the root directory and add the following environme
 
 ```plaintext
 NEXT_PUBLIC_API_URL=http://your-api-url
+ ```
+
+### Figma Design
+
+Check out the design for this project on Figma[https://www.figma.com/design/SQQJzcHxE4HJoJZtshkNtT/Untitled?node-id=0-1&t=m9QXV0t3mnkfbzmL-1].
